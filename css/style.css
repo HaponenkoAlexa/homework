@@ -55,12 +55,7 @@ q:before, q:after {
   z-index: -1;
 }
 
-.icon-nav{
-  width: 10px;
-  height: 10px;
-  fill: #eae9f4;
-  align-items: center;
-}
+
 
 .header{
     background: rgb(6, 0, 10);
@@ -92,26 +87,43 @@ q:before, q:after {
 .header-menu li{
     position: relative;
     font-family: 'Fasthand';
+    min-width: 170px;
 }
+
+.icon-nav{
+  width: 18px;
+  height: 18px;
+  fill: #eae9f4;
+  align-items: center;
+
+ 
+} 
 
 
 .header-menu li a{
-    display: block;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: #fdfbfb;
     font-size: 20px;
     border: solid 2px black;
     background: hsl(294, 77%, 64%);
     border-radius: 10px;
-    padding: 10px 25px;
+    padding: 5px 25px;
     white-space: nowrap;
     text-align: center;
+    min-width: 205px;
    
 }
 
 .header-menu li a:hover{
      background: #fb00ff;
      font-family: 'Caprasimo', cursive;
+     font-size: 21px;
+    
+     
 }
 
 /animation/////////////////////////////////////////////////////
@@ -202,7 +214,7 @@ q:before, q:after {
     color: #fdfbfb;
     text-transform: uppercase;
     position: absolute;
-    left: 150px;
+    left: 100px;
     font-family: 'Noto Serif', serif;
     overflow: hidden;
     padding: 15px 20px;
@@ -214,6 +226,7 @@ q:before, q:after {
     left: 0;
     display: none;
     font-family: 'Fasthand';
+    
    
 
 }
@@ -226,7 +239,8 @@ q:before, q:after {
 
 .hw-menu li a:hover{
   background-color: black;
-
+  min-width: 150px;
+  
 }
 
 .header-menu li:hover .hw-menu{
@@ -236,9 +250,9 @@ q:before, q:after {
 .main-footer{
   height: 60px;
   background: #000000;
-  margin: 400px 0px 0px 0px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 15px;
   display: flex;
 }
 
@@ -250,9 +264,16 @@ q:before, q:after {
 
 }
 
+main{
+  flex: 1;
+  padding: 104px;
+}
 
-
-
+.wrapper{
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
 
 .block-menu{
     position: relative;
@@ -301,15 +322,16 @@ q:before, q:after {
 .flex-side-menu {
 	width: 90px;
 	position: fixed;
-	margin: 5px;
 	padding: 5px;
 	border-radius: 5px;
 	line-height: 20px;
 	background: #5d97aa;
 	font-size: 20px;
 	border: 2px solid #fff;
-	left: 0;
-	top: 50%;  
+	left: 5px;
+	top: 50%; 
+ 
+  margin: -95px 0 0; 
   }
   
   
