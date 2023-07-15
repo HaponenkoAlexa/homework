@@ -8,149 +8,232 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <div class="header"> 
-        <div class="container">
-            <ul class="header-menu">
-             <a href="index.html" class="logo">Oleksandra</a>
-             <li><a href="index.html">Home page</a></li>
-             <li><a href="gallery.html">Gallery</a></li>
-             <li><a href="#">Homeworks</a>
-            <ul class="hw-menu">
-              <li><a href="inline.html">Inline block</a></li>
-              <li><a href="float.html">Float</a></li>
-              <li class="block-menu"><a href="block.html">Block</a>
-              <ul class="flex-menu">
-                <li><a href="flex.html">Flex</a></li>
-              </ul>
-              </li>
-            </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
+   
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
 
-       <div class="float-body">
-<div class="figma-wrapper">
-  <header class="figma-header">
-      <div class="figma-header-container figma-container">
-          <a class="figma-header-logo" href="#Main">Amelia F</a>
-          <ul class="figma-header-list">
-              <li><a href="#Main">Головна</a></li>
-              <li><a href="#About us">Про нас</a></li>
-              <li><a href="#How we work">Як ми працюємо</a></li>
-              <li><a href="#Our works">Наші роботи</a></li>
-              <li><a href="#Contacts">Контакти<a></li>
+    <symbol id="arrow-down" viewBox="0 0 451.847 451.847">
+       <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+     c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+     c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+    </symbol>x
+
+    <symbol id="arrow-left" viewBox="0 0 76 76"  >
+      <path  d="M 33.6458,38L 49.4792,53.8333L 38.7917,53.8333L 22.1667,38L 38.7917,22.1667L 49.4792,22.1667L 33.6458,38 Z "/>
+    </symbol>
+
+    <symbol  id="instagram" viewBox="0 -0.5 25 25" >
+        <path  clip-rule="evenodd" d="M15.5 5H9.5C7.29086 5 5.5 6.79086 5.5 9V15C5.5 17.2091 7.29086 19 9.5 19H15.5C17.7091 19 19.5 17.2091 19.5 15V9C19.5 6.79086 17.7091 5 15.5 5Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path clip-rule="evenodd" d="M12.5 15C10.8431 15 9.5 13.6569 9.5 12C9.5 10.3431 10.8431 9 12.5 9C14.1569 9 15.5 10.3431 15.5 12C15.5 12.7956 15.1839 13.5587 14.6213 14.1213C14.0587 14.6839 13.2956 15 12.5 15Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="15.5" y="9" width="2" height="2" rx="1" transform="rotate(-90 15.5 9)" />
+        <rect x="16" y="8.5" width="1" height="1" rx="0.5" transform="rotate(-90 16 8.5)" stroke="#000000" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="map" viewBox="0 0 24 24" >
+      <path d="M21 7.16229C21 6.11871 21 5.59692 20.7169 5.20409C20.4337 4.81126 19.9387 4.64625 18.9487 4.31624L17.7839 3.92799C16.4168 3.47229 15.7333 3.24444 15.0451 3.3366C14.3569 3.42876 13.7574 3.82843 12.5583 4.62778L11.176 5.54937C10.2399 6.1734 9.77191 6.48541 9.24685 6.60952C9.05401 6.65511 8.85714 6.68147 8.6591 6.68823C8.11989 6.70665 7.58626 6.52877 6.51901 6.17302C5.12109 5.70705 4.42213 5.47406 3.89029 5.71066C3.70147 5.79466 3.53204 5.91678 3.39264 6.06935C3 6.49907 3 7.23584 3 8.70938V12.7736M21 11V15.2907C21 16.7642 21 17.501 20.6074 17.9307C20.468 18.0833 20.2985 18.2054 20.1097 18.2894C19.5779 18.526 18.8789 18.293 17.481 17.827C16.4137 17.4713 15.8801 17.2934 15.3409 17.3118C15.1429 17.3186 14.946 17.3449 14.7532 17.3905C14.2281 17.5146 13.7601 17.8266 12.824 18.4507L11.4417 19.3722C10.2426 20.1716 9.64311 20.5713 8.95493 20.6634C8.26674 20.7556 7.58319 20.5277 6.21609 20.072L5.05132 19.6838C4.06129 19.3538 3.56627 19.1888 3.28314 18.7959C3.01507 18.424 3.0008 17.9365 3.00004 17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M15 3.5V7M15 17V11" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M9 20.5V17M9 7V13" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+    <symbol id="telegram" viewBox="0 0 192 192">
+    <path d="M23.073 88.132s65.458-26.782 88.16-36.212c8.702-3.772 38.215-15.843 38.215-15.843s13.621-5.28 12.486 7.544c-.379 5.281-3.406 23.764-6.433 43.756-4.54 28.291-9.459 59.221-9.459 59.221s-.756 8.676-7.188 10.185c-6.433 1.509-17.027-5.281-18.919-6.79-1.513-1.132-28.377-18.106-38.214-26.404-2.649-2.263-5.676-6.79.378-12.071 13.621-12.447 29.891-27.913 39.728-37.72 4.54-4.527 9.081-15.089-9.837-2.264-26.864 18.483-53.35 35.835-53.35 35.835s-6.053 3.772-17.404.377c-11.351-3.395-24.594-7.921-24.594-7.921s-9.08-5.659 6.433-11.693Z"/></svg>
+    </symbol>
+
+
+
+
+
+
+<div class="wrapper">
+  <header>
+    <div class="header"> 
+      <div class="container">
+          <ul class="header-menu">
+           <a href="index.html" class="logo button">
+            <span class="button-line button-line-top"></span>
+            <span class="button-line button-line-right"></span>
+            <span class="button-line button-line-bottom"></span>
+            <span class="button-line button-line-left"></span>
+            Oleksandra
+           </a>
+           <li><a  href="index.html">Home page</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="#">Homeworks
+            <svg class="icon-nav">
+              <use href="#arrow-down"></use>
+            </svg>
+           </a> 
+          <ul class="hw-menu">
+            <li><a href="inline.html">Inline block</a></li>
+            <li><a href="float.html">Float</a></li>
+            <li class="block-menu"><a href="block.html">
+              <svg class="icon-nav">
+                <use href="#arrow-left"></use>
+              </svg>
+              Block</a>
+            <ul class="flex-menu">
+              <li><a href="flex.html">Flex</a></li>
+            </ul>
+            </li>
           </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-  </header>
-      <main>
-          <section>
-              <div class="figma-block-1" id="Main">
-                  <div class="bfigma-lock-1-text">
-                      <h1 class="figma-title">Amelia Flowers</h1>
-                      <p>Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
-                      <div class="figma-block-1-button">
-                          <button class="figma-button">Замовити букет</button>
-                          <button class="figma-button">Допомога флориста</button>
+    </header>
+  
+  
+    <main>
+      <section>
+        <div class="container">
+            <div class="float-body">
+                <div class="figma-wrapper">
+                  <header class="figma-header">
+                      <div class="figma-header-container figma-container">
+                          <a class="figma-header-logo" href="#Main">Amelia F</a>
+                          <ul class="figma-header-list">
+                              <li><a href="#Main">Головна</a></li>
+                              <li><a href="#About us">Про нас</a></li>
+                              <li><a href="#How we work">Як ми працюємо</a></li>
+                              <li><a href="#Our works">Наші роботи</a></li>
+                              <li><a href="#Contacts">Контакти<a></li>
+                          </ul>
                       </div>
+                  </header>
+                      <main>
+                          <section>
+                              <div class="figma-block-1" id="Main">
+                                  <div class="bfigma-lock-1-text">
+                                      <h1 class="figma-title">Amelia Flowers</h1>
+                                      <p>Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
+                                      <div class="figma-block-1-button">
+                                          <button class="figma-button">Замовити букет</button>
+                                          <button class="figma-button">Допомога флориста</button>
+                                      </div>
+                                  </div>
+                                  <div>
+                                      <img class="figma-img" src="/img/Rectangle 82.png" alt="flowers">
+                                  </div>
+                              </div>
+                  
+                              <div class="figma-about-us" id="About us">
+                                  <div>
+                                      <h2>Про нас</h2>
+                                      <p>Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
+                                  </div>
+                              </div>
+                  
+                              <div class="figma-block-2">
+                                  <div class="figma-img-block">
+                                      <img src="img/Layer 2money-tree.png" alt="money-tree">
+                                      <p>Найкращі ціни</p>
+                                  </div>
+                                  <div class="figma-img-block">
+                                      <img src="img/Layer 2notes.png" alt="notes">
+                                      <p>Індивідуальний підбір</p>
+                                  </div>
+                                  <div class="figma-img-block">
+                                      <img src="img/Layer 2hand.png" alt="hand">
+                                      <p>Швидка доставка</p>
+                                  </div>
+                                  <div class="figma-img-block">
+                                      <img src="img/Layer 2drop.png" alt="drop">
+                                      <p>Завжди свіжі квіти</p>
+                                  </div>
+                                  <div class="figma-img-block">
+                                      <img src="img/Layer 2money.png" alt="money">
+                                      <p>Бонусна система</p>
+                                  </div>
+                              </div>
+                  
+                              <div class="figma-block-3" id="How we work">
+                                  <div> <img class="figma-img-vase" src="img/glass-vase-with-flowers-in-the-interior-of-the-room 1.png" alt="vase"></div>
+                                  <div>
+                                      <h3 class="figma-title-2">Як ми працюємо</h3>
+                                      <p class="figma-block-2-text">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
+                                  </div>
+                              </div>
+                  
+                              <div class="figma-block-4" id="Our works">
+                                  <div class="figma-title-3">
+                                      <h4>Наші роботи</h4>
+                                  </div>
+                  
+                                  <div class="figma-cards">
+                                      <div class="figma-card">
+                                          <img src="img/Rectangle 87.png" alt="flower">
+                                          <div class="figma-card-caption">Букет "Флоренція"</div>
+                                      </div>
+                  
+                                      <div class="figma-card">
+                                          <img src="img/Rectangle 89.png" alt="flower">
+                                          <div class="figma-card-caption">Букет "Флоренція"</div>
+                                      </div>
+                  
+                                      <div class="figma-card">
+                                          <img src="img/Rectangle 88.png" alt="flower">
+                                          <div class="figma-card-caption">Букет "Флоренція"</div>
+                                      </div>
+                  
+                                  </div>
+                              </div>
+                  
+                          </section>
+                      </main>
+                      <footer class="figma-footer" id="Contacts">
+                          <div class="figma-footer-data">
+                          <div>
+                              <ul class="figma-footer-contacts">
+                                  <li>Контакти</li>
+                                  <li>+380517328964</li>
+                                  <li>+380517328964</li>
+                                  <li>Харків, вул Сумська 115</li>
+                              </ul>  
+                          </div>
+                          <div>
+                              <ul class="figma-footer-logo">
+                                  <li>Amelia F</li>
+                              </ul>
+                          </div>
+                          <div>
+                              <ul class="figma-icons">
+                                  <li>Ми в соц мережах</li>
+                                  <li><img class="figma-img-icon" src="img/иконци.png" alt="icons"></li>
+                              </ul>
+                          </div>
+                          </div>
+                          <div class="figma-footer-date">© 2023</div>
+                      </footer>
+                  
                   </div>
-                  <div>
-                      <img class="figma-img" src="/img/Rectangle 82.png" alt="flowers">
-                  </div>
-              </div>
+                </div>
+        </div>
+      </section>
+    </main>
   
-              <div class="figma-about-us" id="About us">
-                  <div>
-                      <h2>Про нас</h2>
-                      <p>Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
-                  </div>
-              </div>
-  
-              <div class="figma-block-2">
-                  <div class="figma-img-block">
-                      <img src="img/Layer 2money-tree.png" alt="money-tree">
-                      <p>Найкращі ціни</p>
-                  </div>
-                  <div class="figma-img-block">
-                      <img src="img/Layer 2notes.png" alt="notes">
-                      <p>Індивідуальний підбір</p>
-                  </div>
-                  <div class="figma-img-block">
-                      <img src="img/Layer 2hand.png" alt="hand">
-                      <p>Швидка доставка</p>
-                  </div>
-                  <div class="figma-img-block">
-                      <img src="img/Layer 2drop.png" alt="drop">
-                      <p>Завжди свіжі квіти</p>
-                  </div>
-                  <div class="figma-img-block">
-                      <img src="img/Layer 2money.png" alt="money">
-                      <p>Бонусна система</p>
-                  </div>
-              </div>
-  
-              <div class="figma-block-3" id="How we work">
-                  <div> <img class="figma-img-vase" src="img/glass-vase-with-flowers-in-the-interior-of-the-room 1.png" alt="vase"></div>
-                  <div>
-                      <h3 class="figma-title-2">Як ми працюємо</h3>
-                      <p class="figma-block-2-text">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
-                  </div>
-              </div>
-  
-              <div class="figma-block-4" id="Our works">
-                  <div class="figma-title-3">
-                      <h4>Наші роботи</h4>
-                  </div>
-  
-                  <div class="figma-cards">
-                      <div class="figma-card">
-                          <img src="img/Rectangle 87.png" alt="flower">
-                          <div class="figma-card-caption">Букет "Флоренція"</div>
-                      </div>
-  
-                      <div class="figma-card">
-                          <img src="img/Rectangle 89.png" alt="flower">
-                          <div class="figma-card-caption">Букет "Флоренція"</div>
-                      </div>
-  
-                      <div class="figma-card">
-                          <img src="img/Rectangle 88.png" alt="flower">
-                          <div class="figma-card-caption">Букет "Флоренція"</div>
-                      </div>
-  
-                  </div>
-              </div>
-  
-          </section>
-      </main>
-      <footer class="figma-footer" id="Contacts">
-          <div class="figma-footer-data">
-          <div>
-              <ul class="figma-footer-contacts">
-                  <li>Контакти</li>
-                  <li>+380517328964</li>
-                  <li>+380517328964</li>
-                  <li>Харків, вул Сумська 115</li>
-              </ul>  
-          </div>
-          <div>
-              <ul class="figma-footer-logo">
-                  <li>Amelia F</li>
-              </ul>
-          </div>
-          <div>
-              <ul class="figma-icons">
-                  <li>Ми в соц мережах</li>
-                  <li><img class="figma-img-icon" src="img/иконци.png" alt="icons"></li>
-              </ul>
-          </div>
-          </div>
-          <div class="figma-footer-date">© 2023</div>
-      </footer>
-  
-  </div>
+   
+    <footer class="main-footer">
+      <div>
+        <svg class="icon-media">
+          <use href="#telegram"></use>
+        </svg>
+      </div>
+      <div>
+        <svg class="icon-media">
+          <use href="#instagram"></use>
+        </svg>
+      </div>
+      <div>
+        <svg class="icon-media">
+          <use href="#map"></use>
+        </svg>
+      </div>
+    </footer>
+    
 </div>
+
+  </div>
+
+      
 
 </body>
 </html>

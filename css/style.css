@@ -254,6 +254,7 @@ q:before, q:after {
   justify-content: center;
   gap: 15px;
   display: flex;
+  z-index: 2;
 }
 
 .icon-media{
@@ -273,6 +274,7 @@ main{
   display: flex;
   flex-flow: column;
   min-height: 100vh;
+  transition: padding .2s linear;
 }
 
 .block-menu{
@@ -812,3 +814,57 @@ width: 100px;
   clear: both;
 }
 
+.sidebar{
+  position: fixed;
+  background: hsl(294, 77%, 64%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding-top: 100px;
+  width: 50px;
+  overflow: hidden;
+  transition: width .2s linear;
+  z-index: 1;
+}
+
+.sidebar-link{
+font-size: 1.5rem;
+text-decoration: none;
+color: #ffffff;
+font-weight: 900;
+padding: 10px 20px;
+display: flex;
+align-items: center;
+gap: 20px;
+white-space: nowrap;
+}
+
+.sidebar-link svg{
+  width: 15px;
+  height: 15px;
+  fill: rgb(255, 255, 255);
+  rotate: -90deg;
+}
+
+.sidebar-link span{
+  line-height: 15px;
+ line-height: 10px;
+ flex: 0 0 auto;
+ padding: 5px;
+}
+
+.sidebar-link:hover{
+  background: #ed6bef;
+}
+.sidebar li+li{
+  margin-top: 10px;
+}
+
+.sidebar-link:hover svg{
+  transform: scale(1.5);
+  transition: 0.5s;
+  rotate: 0deg;
+}
+
+.sidebar:hover {
+width: 200px;}
