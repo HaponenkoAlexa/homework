@@ -332,7 +332,6 @@ main{
 	border: 2px solid #fff;
 	left: 5px;
 	top: 50%; 
- 
   margin: -95px 0 0; 
   }
   
@@ -868,3 +867,77 @@ white-space: nowrap;
 
 .sidebar:hover {
 width: 200px;}
+
+.right-bar {
+  position: fixed;
+  right: -147px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  transition: right 0.3s ease-in-out; 
+}
+
+
+.content-rb {
+  background: hsl(294, 77%, 64%);
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.nut:hover + .right-bar,
+.right-bar:hover {
+  right: 5px;
+  animation: spin-off  linear infinite; 
+}
+
+.content-rb li{
+  margin: 10px 0;
+}
+
+.button-rb{
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  background: #000;
+}
+
+.button-rb:hover{
+  background: #ff00ea;
+}
+
+.button-rb a{
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nut {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  animation: spin 2s linear infinite; 
+  fill: #ed6bef;
+  stroke: #000;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.right-bar:hover .nut {
+  animation-play-state: paused;
+}
